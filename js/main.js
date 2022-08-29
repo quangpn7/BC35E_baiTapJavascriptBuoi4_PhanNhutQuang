@@ -137,10 +137,11 @@ document.getElementById("btnTria").onclick = function () {
   var triagle = "";
 
   if (len1 == len2 && len1 == len3) {
-    triagle = " tam giác <span class='text-danger font-weight-bold'>đều</span>";
+    triagle =
+      " tam giác <span class='text-danger font-weight-bold text-uppercase'>đều</span>";
   } else if (len1 == len2 || len1 == len3 || len2 == len3) {
     triagle =
-      " tam giác <span class='text-danger font-weight-bold'>cân<span class='text-danger font-weight-bold'></span>";
+      " tam giác <span class='text-danger font-weight-bold text-uppercase'>cân</span>";
   } else if (
     (Math.pow(len1, 2) == Math.pow(len2, 2) + Math.pow(len3, 2) &&
       len2 == len3) ||
@@ -149,17 +150,17 @@ document.getElementById("btnTria").onclick = function () {
     (Math.pow(len3, 2) == Math.pow(len1, 2) + Math.pow(len2, 2) && len1 == len2)
   ) {
     triagle =
-      " tam giác <span class='text-danger font-weight-bold'>vuông cân</span>";
+      " tam giác <span class='text-danger font-weight-bold text-uppercase'>vuông cân</span>";
   } else if (
     Math.pow(len1, 2) == Math.pow(len2, 2) + Math.pow(len3, 2) ||
     Math.pow(len2, 2) == Math.pow(len1, 2) + Math.pow(len3, 2) ||
     Math.pow(len3, 2) == Math.pow(len1, 2) + Math.pow(len2, 2)
   ) {
     triagle =
-      " tam giác <span class='text-danger font-weight-bold'>vuông</span>";
+      " tam giác <span class='text-danger font-weight-bold text-uppercase'>vuông</span>";
   } else {
     triagle =
-      " loại <span class='text-danger font-weight-bold'>tam giác nào đó</span>";
+      " loại <span class='text-danger font-weight-bold text-uppercase'>tam giác nào đó</span>";
   }
   document.getElementById("triaResult").innerHTML =
     "<p>" + "Đây là " + triagle + "</p>";
