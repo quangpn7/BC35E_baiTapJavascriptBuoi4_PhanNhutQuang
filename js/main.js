@@ -15,17 +15,17 @@ document.getElementById("btnOrder").onclick = function () {
   var order = "";
   // XỬ LÝ
   if (a > b && b > c) {
-    order = a + " > " + b + " > " + c;
+    order = c + " < " + b + " < " + a;
   } else if (a > c && c > b) {
-    order = a + " > " + c + " > " + b;
+    order = b + " < " + c + " < " + a;
   } else if (b > a && a > c) {
-    order = b + " > " + a + " > " + c;
+    order = c + " < " + a + " < " + b;
   } else if (b > c && c > a) {
-    order = b + " > " + c + " > " + a;
+    order = a + " < " + c + " < " + b;
   } else if (c > a && a > b) {
-    order = c + " > " + a + " > " + b;
+    order = b + " < " + a + " < " + c;
   } else {
-    order = c + " > " + b + " > " + a;
+    order = a + " < " + b + " < " + c;
   }
   //   ĐẦU RA
   document.getElementById("orderList").innerHTML =
